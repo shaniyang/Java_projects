@@ -16,32 +16,35 @@ public class BottleDispenser {
 
 
 
-    public void addMoney() {
+    public String addMoney() {
         money += 1;
-        System.out.println("Klink! Added more money!");
+        String s = "Klink! Added more money!";
+        return s;
     }
-    public boolean buyBottle() {
+    public String buyBottle() {
+        String s ="";
         if (money > 0) {
             if (bottle_list.size() > 1) {
                 removeBottle();
                 money -= 1;
-                System.out.println("KACHUNK! " + b.getName() +" " + b.getManufacturer() +" " + b.getEnergy() + " came out of the dispenser!");
-                return true;
+                s = ("KACHUNK! " + b.getName() + " came out of the dispenser!");
+                return s;
             }
-            else if (money == 0 && bottle_list.size() == 0){
+            /*else if (money == 0 && bottle_list.size() == 0){
                 returnMoney();
                 return false;
-            }
+            }*/
         }
         else {
-            System.out.println(("Add money first!"));
-            addMoney();
+            s = ("Add money first!");
+            return s;
         }
-        return true;
+        return s;
     }
-    public void returnMoney() {
+    public String returnMoney() {
         money = 0;
-        System.out.println("Klink klink. Money came out!");
+        String s = ("Klink klink. Money came out!");
+        return s;
     }
 
     public void removeBottle() {
