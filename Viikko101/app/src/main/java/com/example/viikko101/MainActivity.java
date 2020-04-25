@@ -15,15 +15,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button go = findViewById(R.id.searchbutton);
-        EditText text = findViewById(R.id.text);
-        WebView web = findViewById(R.id.webButton);
+        final EditText text = findViewById(R.id.text);
+        final WebView web = findViewById(R.id.webButton);
         web.setWebViewClient(new WebViewClient());
+        web.getSettings().setJavaScriptEnabled(true);
+        web.loadUrl("https://lut.fi");
 
         go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                web.setWebViewClient(new WebViewClient());
                 url_add = text.getText().toString();
-
+                if (!url_add.startsWith("http://") && !url_add.startsWith("https://")){
+                    url_add = "http://" + url_add;
+                }
+                web.loadUrl(url_add);
 
             }
         });

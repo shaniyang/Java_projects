@@ -12,28 +12,31 @@
         android:layout_height="653dp"
         android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchbutton" />
 
     <EditText
         android:id="@+id/text"
         android:layout_width="239dp"
         android:layout_height="58dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
         android:ems="10"
         android:hint="URL"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="3dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/searchbutton"
         android:layout_width="46dp"
         android:layout_height="48dp"
+        android:layout_marginTop="17dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="12dp"
         android:text="Go"
-        app:layout_constraintBottom_toTopOf="@+id/webButton"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
