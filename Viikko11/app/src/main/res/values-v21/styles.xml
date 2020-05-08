@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This whole file is meant for api level 21 or higher.Because statusBarColor is not transparent
+below 21.The syles.xml was created for this purpose.See the name v21.It is as is because
+Available qualifiers was version and  platform api level is set to 21.If min sdk is 21 or higher
+we dont need to create a separate file like this-->
+<resources>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+</resources>
